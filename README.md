@@ -1,4 +1,4 @@
-== Taco API
+= Taco API
 ==
 
 ==== Create Taco
