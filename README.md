@@ -1,4 +1,5 @@
 == Taco API
+==
 
 ==== Create Taco
     POST: /api/v1/tacos/add_taco
@@ -37,7 +38,7 @@
       id:      String *required
     results:
       return
-      
+
     curl -X \
       "DELETE" \
       http://localhost:3000/api/v1/tacos/1
