@@ -53,7 +53,7 @@ module Endpoints
       end
 
       # Update Item
-      # POST: /api/v1/tacos/update_taco
+      # POST: /api/v1/tacos/
       # parameters:
       #   name:           String *required
       #   description         String *required

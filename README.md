@@ -1,24 +1,42 @@
-# README
+== Taco API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+==== Create Taco
+    POST: /api/v1/tacos/add_taco
 
-Things you may want to cover:
+    parameters accepted
+      name:          String *required
+      description:       String *required minimum 6
 
-* Ruby version
+      curl \
+     -F "name=test" \
+     -F "description=test---description" \
+     http://localhost:3000/api/v1/tacos/
+      results:
+      {"status":1,"data":{"name":"test","description":"test---description"}}
 
-* System dependencies
+==== Get Taco API
+    POST: /api/v1/tacos/1
+    parameters:
+      id:      String *required
+    results:
+      {"status":1,"data":{"name":"test","description":"test---description"}}
 
-* Configuration
+==== Update Taco API
 
-* Database creation
+    PATCH: /api/v1/tacos/
 
-* Database initialization
+    parameters accepted
+      'name'      String,      *required
+      'description'   String,      *requried
+    results:
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+==== Delete Taco
+    DELETE: /api/v1/tacos/
+    parameters:
+      id:      String *required
+    results:
+      return
+    curl -X \
+      "DELETE" \
+      http://localhost:3000/api/v1/tacos/1
